@@ -1,6 +1,6 @@
 package nfce.nfceByGithub;
 
-import autogeral.emissorfiscal.vo.model.nfceGitHub.NfceLote;
+//import autogeral.emissorfiscal.vo.model.nfceGitHub.NfceLote;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.junit.Test;
@@ -341,15 +341,5 @@ public class TestSerializeble {
                 "  \"versao\" : \"4.00\"\n" +
                 "}";
 
-        ObjectMapper om = new ObjectMapper();
-        om.registerModule(new JavaTimeModule());
-
-        try {
-            NfceLote nfce = om.readValue(json, NfceLote.class);
-            /// RECUPERAR VALORES AQUI PARA TESTAR
-
-        } catch (IOException e) {
-            System.out.println("Ocorreu um erro: " + e);
-        }
-    }
-}
+        System.out.println(json);
+    }}

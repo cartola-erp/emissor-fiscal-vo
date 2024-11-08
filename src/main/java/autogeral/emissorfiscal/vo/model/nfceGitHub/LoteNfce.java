@@ -1,16 +1,10 @@
 package autogeral.emissorfiscal.vo.model.nfceGitHub;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.List;
 
-@Getter
-@Setter
-@ToString
 public class LoteNfce implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -23,4 +17,37 @@ public class LoteNfce implements Serializable {
 
     @JsonProperty("NFe")
     private List<InfNfceModel> infNfe;
+
+    public String getIdLote() {
+        return idLote;
+    }
+
+    public void setIdLote(String idLote) {
+        this.idLote = idLote;
+    }
+
+    public String getIndSinc() {
+        return indSinc;
+    }
+
+    public void setIndSinc(String indSinc) {
+        this.indSinc = indSinc;
+    }
+
+    public List<InfNfceModel> getInfNfe() {
+        return infNfe;
+    }
+
+    public void setInfNfe(List<InfNfceModel> infNfe) {
+        this.infNfe = infNfe;
+    }
+
+    @Override
+    public String toString() {
+        return "LoteNfce{" +
+                "idLote='" + idLote + '\'' +
+                ", indSinc='" + indSinc + '\'' +
+                ", infNfe=" + infNfe +
+                '}';
+    }
 }
