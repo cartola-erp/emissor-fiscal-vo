@@ -1,6 +1,6 @@
 package nfce.nfceByNfeIo;
 
-import autogeral.emissorfiscal.vo.model.nfceByNfeIo.PaymentModel;
+import autogeral.emissorfiscal.vo.InvoiceModel;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.junit.Test;
@@ -57,7 +57,7 @@ public class TestDeserialize {
         om.registerModule(new JavaTimeModule());
 
         try {
-            PaymentModel nfce = om.readValue(jsonString, PaymentModel.class);
+            InvoiceModel nfce = om.readValue(jsonString, InvoiceModel.class);
 
             System.out.println("ID: " +  nfce.getId());
             System.out.println("Operation Nature: " + nfce.getOperationNature());
