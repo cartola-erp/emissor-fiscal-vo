@@ -1,8 +1,11 @@
 package autogeral.emissorfiscal.vo;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@XmlRootElement
 public class InvoiceModel {
 
     private String id;
@@ -36,6 +39,7 @@ public class InvoiceModel {
         this.id = id;
     }
 
+    @XmlElement
     public List<PaymentModel> getPayment() {
         return payment;
     }
@@ -44,6 +48,8 @@ public class InvoiceModel {
         this.payment = payment;
     }
 
+
+    @XmlElement
     public Integer getSerie() {
         return serie;
     }
@@ -52,6 +58,7 @@ public class InvoiceModel {
         this.serie = serie;
     }
 
+    @XmlElement
     public Integer getNumber() {
         return number;
     }
@@ -60,6 +67,7 @@ public class InvoiceModel {
         this.number = number;
     }
 
+    @XmlElement
     public LocalDateTime getOperationOn() {
         return operationOn;
     }
@@ -68,6 +76,7 @@ public class InvoiceModel {
         this.operationOn = operationOn;
     }
 
+    @XmlElement
     public String getOperationNature() {
         return operationNature;
     }
@@ -76,6 +85,7 @@ public class InvoiceModel {
         this.operationNature = operationNature;
     }
 
+    @XmlElement
     public String getOperationType() {
         return operationType;
     }
@@ -84,7 +94,8 @@ public class InvoiceModel {
         this.operationType = operationType;
     }
 
-    public String isDestination() {
+    @XmlElement
+    public String getIsDestination() {
         return destination;
     }
 
@@ -92,7 +103,8 @@ public class InvoiceModel {
         this.destination = destination;
     }
 
-    public String isPrintType() {
+    @XmlElement
+    public String getIsPrintType() {
         return printType;
     }
 
@@ -100,7 +112,8 @@ public class InvoiceModel {
         this.printType = printType;
     }
 
-    public String isPurposeType() {
+    @XmlElement
+    public String getIsPurposeType() {
         return purposeType;
     }
 
@@ -108,6 +121,7 @@ public class InvoiceModel {
         this.purposeType = purposeType;
     }
 
+    @XmlElement
     public String getConsumerType() {
         return consumerType;
     }
@@ -116,7 +130,8 @@ public class InvoiceModel {
         this.consumerType = consumerType;
     }
 
-    public String isPresenceType() {
+    @XmlElement
+    public String getIsPresenceType() {
         return presenceType;
     }
 
@@ -124,6 +139,7 @@ public class InvoiceModel {
         this.presenceType = presenceType;
     }
 
+    @XmlElement
     public LocalDateTime getContingencyOn() {
         return contingencyOn;
     }
@@ -132,6 +148,7 @@ public class InvoiceModel {
         this.contingencyOn = contingencyOn;
     }
 
+    @XmlElement
     public String getContingencyJustification() {
         return contingencyJustification;
     }
@@ -140,6 +157,7 @@ public class InvoiceModel {
         this.contingencyJustification = contingencyJustification;
     }
 
+    @XmlElement
     public BuyerModel getBuyer() {
         return buyer;
     }
@@ -148,6 +166,7 @@ public class InvoiceModel {
         this.buyer = buyer;
     }
 
+    @XmlElement
     public TransportModel getTransport() {
         return transport;
     }
@@ -156,6 +175,7 @@ public class InvoiceModel {
         this.transport = transport;
     }
 
+    @XmlElement
     public AdditionalInformationModel getAdditionalInformation() {
         return additionalInformation;
     }
@@ -164,6 +184,7 @@ public class InvoiceModel {
         this.additionalInformation = additionalInformation;
     }
 
+    @XmlElement
     public List<ItemModel> getItems() {
         return items;
     }
@@ -172,6 +193,7 @@ public class InvoiceModel {
         this.items = items;
     }
 
+    @XmlElement
     public TotalsModel getTotals() {
         return totals;
     }
@@ -180,6 +202,7 @@ public class InvoiceModel {
         this.totals = totals;
     }
 
+    @XmlElement
     public BillingModel getBilling() {
         return billing;
     }
@@ -188,6 +211,7 @@ public class InvoiceModel {
         this.billing = billing;
     }
 
+    @XmlElement
     public IssuerModel getIssuer() {
         return issuer;
     }
@@ -196,6 +220,7 @@ public class InvoiceModel {
         this.issuer = issuer;
     }
 
+    @XmlElement
     public TransactionIntermediateModel getTransactionIntermediate() {
         return transactionIntermediate;
     }
