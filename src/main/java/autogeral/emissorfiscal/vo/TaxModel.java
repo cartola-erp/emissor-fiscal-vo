@@ -9,6 +9,7 @@ public class TaxModel {
     private PisModel pis;
     private CofinsModel cofins;
     private IcmsDestinationModel icmsDestination;
+    private String Cfop;
 
     public double getTotalTax() {
         return totalTax;
@@ -66,6 +67,14 @@ public class TaxModel {
         this.icmsDestination = icmsDestination;
     }
 
+    public String getCfop() {
+        return Cfop;
+    }
+
+    public void setCfop(String cfop) {
+        Cfop = cfop;
+    }
+
     @Override
     public String toString() {
         return "TaxModel{" +
@@ -76,6 +85,7 @@ public class TaxModel {
                 ", pis=" + pis +
                 ", cofins=" + cofins +
                 ", icmsDestination=" + icmsDestination +
+                ", Cfop='" + Cfop + '\'' +
                 '}';
     }
 }

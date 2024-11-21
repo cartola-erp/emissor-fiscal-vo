@@ -1,45 +1,88 @@
 package autogeral.emissorfiscal.vo;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@XmlRootElement
 public class InvoiceModel {
 
-    private String id;
+    private String modeloNota;
+
+    private String finalidadeNota;
+
+    private String codigoLoja;
+
+    private String ufOrigem;
+
+    private String numeroDeSerie;
+
+    private String chaveDaNota;
+
     private List<PaymentModel> payment;
+
     private Integer serie;
+
     private Integer number;
+
     private LocalDateTime operationOn;
+
     private String operationNature;
+
     private String operationType;
+
     private String destination;
+
     private String printType;
+
     private String purposeType;
+
     private String consumerType;
+
     private String presenceType;
+
     private LocalDateTime contingencyOn;
+
     private String contingencyJustification;
+
     private BuyerModel buyer;
+
     private TransportModel transport;
+
     private AdditionalInformationModel additionalInformation;
+
     private List<ItemModel> items;
+
     private TotalsModel totals;
+
     private BillingModel billing;
-    private IssuerModel issuer;
+
+    private EmitModel emitente;
+
     private TransactionIntermediateModel transactionIntermediate;
 
-    public String getId() {
-        return id;
+    public String getModeloNota() {
+        return modeloNota;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setModeloNota(String modeloNota) {
+        this.modeloNota = modeloNota;
     }
 
-    @XmlElement
+    public String getFinalidadeNota() {
+        return finalidadeNota;
+    }
+
+    public void setFinalidadeNota(String finalidadeNota) {
+        this.finalidadeNota = finalidadeNota;
+    }
+
+    public String getCodigoLoja() {
+        return codigoLoja;
+    }
+
+    public void setCodigoLoja(String codigoLoja) {
+        this.codigoLoja = codigoLoja;
+    }
+
     public List<PaymentModel> getPayment() {
         return payment;
     }
@@ -49,7 +92,6 @@ public class InvoiceModel {
     }
 
 
-    @XmlElement
     public Integer getSerie() {
         return serie;
     }
@@ -58,7 +100,7 @@ public class InvoiceModel {
         this.serie = serie;
     }
 
-    @XmlElement
+
     public Integer getNumber() {
         return number;
     }
@@ -67,7 +109,7 @@ public class InvoiceModel {
         this.number = number;
     }
 
-    @XmlElement
+
     public LocalDateTime getOperationOn() {
         return operationOn;
     }
@@ -76,7 +118,7 @@ public class InvoiceModel {
         this.operationOn = operationOn;
     }
 
-    @XmlElement
+
     public String getOperationNature() {
         return operationNature;
     }
@@ -85,7 +127,7 @@ public class InvoiceModel {
         this.operationNature = operationNature;
     }
 
-    @XmlElement
+
     public String getOperationType() {
         return operationType;
     }
@@ -94,7 +136,7 @@ public class InvoiceModel {
         this.operationType = operationType;
     }
 
-    @XmlElement
+
     public String getIsDestination() {
         return destination;
     }
@@ -103,7 +145,7 @@ public class InvoiceModel {
         this.destination = destination;
     }
 
-    @XmlElement
+
     public String getIsPrintType() {
         return printType;
     }
@@ -112,7 +154,7 @@ public class InvoiceModel {
         this.printType = printType;
     }
 
-    @XmlElement
+
     public String getIsPurposeType() {
         return purposeType;
     }
@@ -121,7 +163,7 @@ public class InvoiceModel {
         this.purposeType = purposeType;
     }
 
-    @XmlElement
+
     public String getConsumerType() {
         return consumerType;
     }
@@ -130,7 +172,7 @@ public class InvoiceModel {
         this.consumerType = consumerType;
     }
 
-    @XmlElement
+
     public String getIsPresenceType() {
         return presenceType;
     }
@@ -139,7 +181,7 @@ public class InvoiceModel {
         this.presenceType = presenceType;
     }
 
-    @XmlElement
+
     public LocalDateTime getContingencyOn() {
         return contingencyOn;
     }
@@ -148,7 +190,7 @@ public class InvoiceModel {
         this.contingencyOn = contingencyOn;
     }
 
-    @XmlElement
+
     public String getContingencyJustification() {
         return contingencyJustification;
     }
@@ -157,7 +199,7 @@ public class InvoiceModel {
         this.contingencyJustification = contingencyJustification;
     }
 
-    @XmlElement
+
     public BuyerModel getBuyer() {
         return buyer;
     }
@@ -166,7 +208,7 @@ public class InvoiceModel {
         this.buyer = buyer;
     }
 
-    @XmlElement
+
     public TransportModel getTransport() {
         return transport;
     }
@@ -175,7 +217,7 @@ public class InvoiceModel {
         this.transport = transport;
     }
 
-    @XmlElement
+
     public AdditionalInformationModel getAdditionalInformation() {
         return additionalInformation;
     }
@@ -184,7 +226,7 @@ public class InvoiceModel {
         this.additionalInformation = additionalInformation;
     }
 
-    @XmlElement
+
     public List<ItemModel> getItems() {
         return items;
     }
@@ -193,7 +235,7 @@ public class InvoiceModel {
         this.items = items;
     }
 
-    @XmlElement
+
     public TotalsModel getTotals() {
         return totals;
     }
@@ -202,7 +244,7 @@ public class InvoiceModel {
         this.totals = totals;
     }
 
-    @XmlElement
+
     public BillingModel getBilling() {
         return billing;
     }
@@ -211,16 +253,16 @@ public class InvoiceModel {
         this.billing = billing;
     }
 
-    @XmlElement
-    public IssuerModel getIssuer() {
-        return issuer;
+
+    public EmitModel getEmitente() {
+        return emitente;
     }
 
-    public void setIssuer(IssuerModel issuer) {
-        this.issuer = issuer;
+    public void setEmitente(EmitModel emitente) {
+        this.emitente = emitente;
     }
 
-    @XmlElement
+
     public TransactionIntermediateModel getTransactionIntermediate() {
         return transactionIntermediate;
     }
@@ -229,21 +271,50 @@ public class InvoiceModel {
         this.transactionIntermediate = transactionIntermediate;
     }
 
+    public String getUfOrigem() {
+        return ufOrigem;
+    }
+
+    public void setUfOrigem(String ufOrigem) {
+        this.ufOrigem = ufOrigem;
+    }
+
+    public String getNumeroDeSerie() {
+        return numeroDeSerie;
+    }
+
+    public void setNumeroDeSerie(String numeroDeSerie) {
+        this.numeroDeSerie = numeroDeSerie;
+    }
+
+    public String getChaveDaNota() {
+        return chaveDaNota;
+    }
+
+    public void setChaveDaNota(String chaveDaNota) {
+        this.chaveDaNota = chaveDaNota;
+    }
+
     @Override
     public String toString() {
-        return "PaymentModel{" +
-                "id='" + id + '\'' +
+        return "InvoiceModel{" +
+                "modeloNota='" + modeloNota + '\'' +
+                ", finalidadeNota='" + finalidadeNota + '\'' +
+                ", codigoLoja='" + codigoLoja + '\'' +
+                ", ufOrigem='" + ufOrigem + '\'' +
+                ", numeroDeSerie='" + numeroDeSerie + '\'' +
+                ", chaveDaNota='" + chaveDaNota + '\'' +
                 ", payment=" + payment +
                 ", serie=" + serie +
                 ", number=" + number +
                 ", operationOn=" + operationOn +
                 ", operationNature='" + operationNature + '\'' +
                 ", operationType='" + operationType + '\'' +
-                ", destination=" + destination +
-                ", printType=" + printType +
-                ", purposeType=" + purposeType +
+                ", destination='" + destination + '\'' +
+                ", printType='" + printType + '\'' +
+                ", purposeType='" + purposeType + '\'' +
                 ", consumerType='" + consumerType + '\'' +
-                ", presenceType=" + presenceType +
+                ", presenceType='" + presenceType + '\'' +
                 ", contingencyOn=" + contingencyOn +
                 ", contingencyJustification='" + contingencyJustification + '\'' +
                 ", buyer=" + buyer +
@@ -252,7 +323,7 @@ public class InvoiceModel {
                 ", items=" + items +
                 ", totals=" + totals +
                 ", billing=" + billing +
-                ", issuer=" + issuer +
+                ", emitente=" + emitente +
                 ", transactionIntermediate=" + transactionIntermediate +
                 '}';
     }

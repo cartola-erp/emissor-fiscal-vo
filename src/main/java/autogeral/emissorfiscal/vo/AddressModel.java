@@ -11,6 +11,8 @@ public class AddressModel {
     private String postalCode;
     private String country;
     private String phone;
+    private String codMunicipioIbge;
+    private String municipioNome;
 
     public String getState() {
         return state;
@@ -84,6 +86,22 @@ public class AddressModel {
         this.phone = phone;
     }
 
+    public String getCodMunicipioIbge() {
+        return codMunicipioIbge;
+    }
+
+    public void setCodMunicipioIbge(String codMunicipioIbge) {
+        this.codMunicipioIbge = codMunicipioIbge;
+    }
+
+    public String getMunicipioNome() {
+        return municipioNome;
+    }
+
+    public void setMunicipioNome(String municipioNome) {
+        this.municipioNome = municipioNome;
+    }
+
     @Override
     public String toString() {
         return "AddressModel{" +
@@ -96,6 +114,8 @@ public class AddressModel {
                 ", postalCode='" + postalCode + '\'' +
                 ", country='" + country + '\'' +
                 ", phone='" + phone + '\'' +
+                ", codMunicipioIbge='" + codMunicipioIbge + '\'' +
+                ", municipioNome='" + municipioNome + '\'' +
                 '}';
     }
 }

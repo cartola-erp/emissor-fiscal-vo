@@ -49,6 +49,9 @@ public class IcmsModel {
     private double effectiveAmount;
     private String deductionIndicator;
 
+    //Parte totals de pis e cofins
+
+
     // getters and setters
 
     public String getOrigin() {

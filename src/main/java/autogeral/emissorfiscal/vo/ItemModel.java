@@ -12,7 +12,7 @@ public class ItemModel {
     private String exTipi;
     private int cfop;
     private String unit;
-    private int quantity;
+    private double quantity;
     private double unitAmount;
     private double totalAmount;
     private String codeTaxGTIN;
@@ -100,11 +100,11 @@ public class ItemModel {
         this.unit = unit;
     }
 
-    public int getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 
