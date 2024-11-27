@@ -1,8 +1,12 @@
 package autogeral.emissorfiscal.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class InvoiceModel {
 
     private String modeloNota;
@@ -16,6 +20,10 @@ public class InvoiceModel {
     private String numeroDeSerie;
 
     private String chaveDaNota;
+
+    private String modoPagamento;
+
+    private String modoDePagamentoDescricao;
 
     private List<PaymentModel> payment;
 
@@ -295,6 +303,22 @@ public class InvoiceModel {
         this.chaveDaNota = chaveDaNota;
     }
 
+    public String getModoDePagamentoDescricao() {
+        return modoDePagamentoDescricao;
+    }
+
+    public void setModoDePagamentoDescricao(String modoDePagamentoDescricao) {
+        this.modoDePagamentoDescricao = modoDePagamentoDescricao;
+    }
+
+    public String getModoPagamento() {
+        return modoPagamento;
+    }
+
+    public void setModoPagamento(String modoPagamento) {
+        this.modoPagamento = modoPagamento;
+    }
+
     @Override
     public String toString() {
         return "InvoiceModel{" +
@@ -304,6 +328,8 @@ public class InvoiceModel {
                 ", ufOrigem='" + ufOrigem + '\'' +
                 ", numeroDeSerie='" + numeroDeSerie + '\'' +
                 ", chaveDaNota='" + chaveDaNota + '\'' +
+                ", modoPagamento='" + modoPagamento + '\'' +
+                ", modoDePagamentoDescricao='" + modoDePagamentoDescricao + '\'' +
                 ", payment=" + payment +
                 ", serie=" + serie +
                 ", number=" + number +
