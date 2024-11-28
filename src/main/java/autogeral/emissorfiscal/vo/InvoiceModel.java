@@ -17,6 +17,8 @@ public class InvoiceModel {
 
     private String ufOrigem;
 
+    private String codUf;
+
     private String numeroDeSerie;
 
     private String chaveDaNota;
@@ -31,6 +33,7 @@ public class InvoiceModel {
 
     private Integer number;
 
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS")
     private LocalDateTime operationOn;
 
     private String operationNature;
@@ -46,10 +49,6 @@ public class InvoiceModel {
     private String consumerType;
 
     private String presenceType;
-
-    private LocalDateTime contingencyOn;
-
-    private String contingencyJustification;
 
     private BuyerModel buyer;
 
@@ -189,25 +188,6 @@ public class InvoiceModel {
         this.presenceType = presenceType;
     }
 
-
-    public LocalDateTime getContingencyOn() {
-        return contingencyOn;
-    }
-
-    public void setContingencyOn(LocalDateTime contingencyOn) {
-        this.contingencyOn = contingencyOn;
-    }
-
-
-    public String getContingencyJustification() {
-        return contingencyJustification;
-    }
-
-    public void setContingencyJustification(String contingencyJustification) {
-        this.contingencyJustification = contingencyJustification;
-    }
-
-
     public BuyerModel getBuyer() {
         return buyer;
     }
@@ -215,7 +195,6 @@ public class InvoiceModel {
     public void setBuyer(BuyerModel buyer) {
         this.buyer = buyer;
     }
-
 
     public TransportModel getTransport() {
         return transport;
@@ -319,6 +298,14 @@ public class InvoiceModel {
         this.modoPagamento = modoPagamento;
     }
 
+    public String getCodUf() {
+        return codUf;
+    }
+
+    public void setCodUf(String codUf) {
+        this.codUf = codUf;
+    }
+
     @Override
     public String toString() {
         return "InvoiceModel{" +
@@ -341,8 +328,6 @@ public class InvoiceModel {
                 ", purposeType='" + purposeType + '\'' +
                 ", consumerType='" + consumerType + '\'' +
                 ", presenceType='" + presenceType + '\'' +
-                ", contingencyOn=" + contingencyOn +
-                ", contingencyJustification='" + contingencyJustification + '\'' +
                 ", buyer=" + buyer +
                 ", transport=" + transport +
                 ", additionalInformation=" + additionalInformation +
