@@ -33,7 +33,7 @@ public class InvoiceModel {
 
     private Integer number;
 
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime operationOn;
 
     private String operationNature;

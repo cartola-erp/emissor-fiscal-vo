@@ -8,8 +8,7 @@ public class ItemModel {
     private String codeGTIN;
     private String description;
     private String ncm;
-    private List<String> nve;
-    private String exTipi;
+    private int exTipi;
     private int cfop;
     private String unit;
     private double quantity;
@@ -68,19 +67,11 @@ public class ItemModel {
         this.ncm = ncm;
     }
 
-    public List<String> getNve() {
-        return nve;
-    }
-
-    public void setNve(List<String> nve) {
-        this.nve = nve;
-    }
-
-    public String getExTipi() {
+    public int getExTipi() {
         return exTipi;
     }
 
-    public void setExTipi(String exTipi) {
+    public void setExTipi(int exTipi) {
         this.exTipi = exTipi;
     }
 
@@ -291,7 +282,7 @@ public class ItemModel {
                 ", codeGTIN='" + codeGTIN + '\'' +
                 ", description='" + description + '\'' +
                 ", ncm='" + ncm + '\'' +
-                ", nve=" + nve +
+//                ", nve=" + nve +
                 ", exTipi='" + exTipi + '\'' +
                 ", cfop=" + cfop +
                 ", unit='" + unit + '\'' +
