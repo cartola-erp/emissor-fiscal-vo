@@ -14,6 +14,8 @@ public class InvoiceModelTest {
     @Test
     public void teste_serialize01() {
         InvoiceModel invoice = new InvoiceModel();
+        invoice.setReponseQueue("vault");
+        invoice.setIncludePdf(true);
         invoice.setCodigoLoja("26");
         invoice.setCodUf("12");
         invoice.setConsumerType("1");
