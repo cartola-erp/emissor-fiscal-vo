@@ -66,6 +66,9 @@ public class InvoiceModel {
 
     private TransactionIntermediateModel transactionIntermediate;
 
+    private String reponseQueue;
+    private boolean includePdf = false;
+
     public String getModeloNota() {
         return modeloNota;
     }
@@ -306,36 +309,24 @@ public class InvoiceModel {
         this.codUf = codUf;
     }
 
+    public String getReponseQueue() {
+        return reponseQueue;
+    }
+
+    public void setReponseQueue(String reponseQueue) {
+        this.reponseQueue = reponseQueue;
+    }
+
+    public boolean isIncludePdf() {
+        return includePdf;
+    }
+
+    public void setIncludePdf(boolean includePdf) {
+        this.includePdf = includePdf;
+    }
+
     @Override
     public String toString() {
-        return "InvoiceModel{" +
-                "modeloNota='" + modeloNota + '\'' +
-                ", finalidadeNota='" + finalidadeNota + '\'' +
-                ", codigoLoja='" + codigoLoja + '\'' +
-                ", ufOrigem='" + ufOrigem + '\'' +
-                ", numeroDeSerie='" + numeroDeSerie + '\'' +
-                ", chaveDaNota='" + chaveDaNota + '\'' +
-                ", modoPagamento='" + modoPagamento + '\'' +
-                ", modoDePagamentoDescricao='" + modoDePagamentoDescricao + '\'' +
-                ", payment=" + payment +
-                ", serie=" + serie +
-                ", number=" + number +
-                ", operationOn=" + operationOn +
-                ", operationNature='" + operationNature + '\'' +
-                ", operationType='" + operationType + '\'' +
-                ", destination='" + destination + '\'' +
-                ", printType='" + printType + '\'' +
-                ", purposeType='" + purposeType + '\'' +
-                ", consumerType='" + consumerType + '\'' +
-                ", presenceType='" + presenceType + '\'' +
-                ", buyer=" + buyer +
-                ", transport=" + transport +
-                ", additionalInformation=" + additionalInformation +
-                ", items=" + items +
-                ", totals=" + totals +
-                ", billing=" + billing +
-                ", emitente=" + emitente +
-                ", transactionIntermediate=" + transactionIntermediate +
-                '}';
+        return "InvoiceModel{" + "modeloNota='" + modeloNota + '\'' + ", finalidadeNota='" + finalidadeNota + '\'' + ", codigoLoja='" + codigoLoja + '\'' + ", ufOrigem='" + ufOrigem + '\'' + ", numeroDeSerie='" + numeroDeSerie + '\'' + ", chaveDaNota='" + chaveDaNota + '\'' + ", modoPagamento='" + modoPagamento + '\'' + ", modoDePagamentoDescricao='" + modoDePagamentoDescricao + '\'' + ", payment=" + payment + ", serie=" + serie + ", number=" + number + ", operationOn=" + operationOn + ", operationNature='" + operationNature + '\'' + ", operationType='" + operationType + '\'' + ", destination='" + destination + '\'' + ", printType='" + printType + '\'' + ", purposeType='" + purposeType + '\'' + ", consumerType='" + consumerType + '\'' + ", presenceType='" + presenceType + '\'' + ", buyer=" + buyer + ", transport=" + transport + ", additionalInformation=" + additionalInformation + ", items=" + items + ", totals=" + totals + ", billing=" + billing + ", emitente=" + emitente + ", transactionIntermediate=" + transactionIntermediate + '}';
     }
 }
